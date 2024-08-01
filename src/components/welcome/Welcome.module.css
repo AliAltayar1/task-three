@@ -1,0 +1,55 @@
+.contanier {
+  background: linear-gradient(
+    109deg,
+    #7c8761 -21.51%,
+    #80af81 36.42%,
+    rgba(26, 83, 25, 0.9) 87.8%
+  );
+  min-height: calc(100vb);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+  padding: 0px 155px;
+}
+
+@media (min-width: 1350px) {
+  .contanier {
+    padding: 0 250px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .contanier {
+    padding: 0 100px;
+  }
+}
+
+@media (max-width: 650px) {
+  .contanier {
+    padding: 0 50px;
+  }
+}
+
+@media (max-width: 400px) {
+  .contanier {
+    padding: 0 10px;
+  }
+}
+
+.contanier .logo {
+  color: #fff;
+  font-family: Pristina;
+  font-size: 60px;
+  font-weight: 400;
+  margin: 0;
+  align-self: start;
+}
+
+.contanier .welcome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
