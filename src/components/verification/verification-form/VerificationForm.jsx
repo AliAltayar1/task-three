@@ -1,12 +1,15 @@
 import styles from "./VerificationForm.module.css";
 import VerificationCode from "./verification-code/VerificationCode";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const VerificationForm = () => {
+  const { t } = useTranslation();
+
   return (
     <>
       <div className={styles.singupform}>
-        <h1> ENTER CODE</h1>
+        <h1>{t("enterCode")}</h1>
         <div className={styles.icon}>
           <svg
             width="30"
@@ -22,12 +25,12 @@ const VerificationForm = () => {
           </svg>
         </div>
         <div className={styles.content}>
-          <p>The verification code has been sent to your email</p>
-          <span>*****@gmail.com</span>
+          <p>{t("verifyNote")}</p>
+          <span>{t("verifyiEx")}</span>
         </div>
         <VerificationCode></VerificationCode>
         <Link to="/welcome" className={styles.welcomeRoute}>
-          <button>Verify</button>
+          <button>{t("verify")}</button>
         </Link>
       </div>
     </>

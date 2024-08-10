@@ -1,0 +1,20 @@
+{
+  "signup": "S'inscrire",
+  "haveAnAcc": "vous avez un compte?",
+  "pass": "Mot de passe",
+  "rePass": "Confirmer le mot de passe",
+  "usrName": "Nom d'utilisateur",
+  "phonNumber": "Numéro de téléphone",
+  "email": "E-mail",
+  "uplodfile": "Télécharger le certificat",
+  "login": "se connecter",
+  "dontHvANAcc": "vous n'avez pas de compte?",
+  "fogetPass": "Mot de passe oublié",
+  "logout": "se déconnecter",
+  "welcome": "Bienvenue dans notre magasin",
+  "enterCode": "ENTRER LE CODE",
+  "verifyNote": "Le code de vérification a été envoyé à votre e-mail",
+  "verifyiEx": "*****@gmail.com",
+  "verify": "Vérifier",
+  "alert": "Voulez-vous enregistrer vos préférences de langue et de mode sombre dans le stockage local ?"
+}

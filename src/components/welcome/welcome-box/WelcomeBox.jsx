@@ -1,23 +1,26 @@
 import styles from "./WelcomeBox.module.css";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const WelcomeBox = () => {
+  const { t } = useTranslation();
+
   return (
     <>
       <div className={styles.welcomebox}>
         <Link to="/login">
-          <button>logout</button>
+          <button>{t("logout")}</button>
         </Link>
-        <p>Welcome to our store</p>
+        <p>{t("welcome")}</p>
         <div className={styles.imgContanier}>
           <div className={styles.img}>
-            <img src="/plant2.png" alt="plant2" />
+            <img src={`${process.env.PUBLIC_URL}/plant2.png`} alt="plant2" />
           </div>
           <div className={styles.img}>
-            <img src="/plant1.png" alt="plant1" />
+            <img src={`${process.env.PUBLIC_URL}/plant1.png`} alt="plant1" />
           </div>
           <div className={styles.img}>
-            <img src="/plant3.png" alt="plant3" />
+            <img src={`${process.env.PUBLIC_URL}/plant3.png`} alt="plant3" />
           </div>
         </div>
       </div>

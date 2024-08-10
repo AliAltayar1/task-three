@@ -12,6 +12,7 @@
   flex-direction: column;
   gap: 50px;
   padding: 0px 155px;
+  transition: 0.3s;
 }
 
 @media (min-width: 1350px) {
@@ -36,15 +37,6 @@
   .contanier {
     padding: 0 10px;
   }
-}
-
-.contanier .logo {
-  color: #fff;
-  font-family: Pristina;
-  font-size: 60px;
-  font-weight: 400;
-  margin: 0;
-  align-self: start;
 }
 
 .contanier .welcome {

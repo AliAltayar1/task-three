@@ -1,11 +1,14 @@
 import styles from "./SignupForm.module.css";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const SingupForm = () => {
+  const { t } = useTranslation();
+
   return (
     <>
       <div className={styles.singupform}>
-        <h1>SIGN UP</h1>
+        <h1>{t("signup")}</h1>
         <div className={styles.icon}>
           <svg
             width="45"
@@ -37,26 +40,26 @@ const SingupForm = () => {
         </div>
         <div className={styles.inputs}>
           <div>
-            <input type="text" placeholder="User Name" />
-            <input type="text" placeholder="Phone Number" />
+            <input type="text" placeholder={t("usrName")} />
+            <input type="text" placeholder={t("phonNumber")} />
           </div>
           <div>
-            <input type="email" placeholder="Email" />
-            <input type="password" placeholder="Password" />
+            <input type="email" placeholder={t("email")} />
+            <input type="password" placeholder={t("pass")} />
           </div>
           <div>
-            <input type="password" placeholder="Re Password" />
-            <input type="text" placeholder="Upload Certificate" />
+            <input type="password" placeholder={t("rePass")} />
+            <input type="text" placeholder={t("uplodfile")} />
           </div>
         </div>
         <Link to="/verification" className={styles.verificationRoute}>
-          <button>Sign Up</button>
+          <button>{t("signup")}</button>
         </Link>
         <div className={styles.help}>
           <div>
-            <p>have an account? </p>
+            <p>{t("haveAnAcc")} </p>
             <Link to="/login" className={styles.login}>
-              login
+              {t("login")}
             </Link>
           </div>
         </div>

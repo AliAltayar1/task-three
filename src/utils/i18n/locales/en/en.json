@@ -1,0 +1,20 @@
+{
+  "signup": "Sign Up",
+  "haveAnAcc": "have an account?",
+  "pass": "Password",
+  "rePass": "Re Password",
+  "usrName": "User Name",
+  "phonNumber": "Phone Number",
+  "email": "Email",
+  "uplodfile": "Upload Certificate",
+  "login": "login",
+  "dontHvANAcc": "don't have an account?",
+  "fogetPass": "Forget Password",
+  "logout": "logout",
+  "welcome": "Welcome to our store",
+  "enterCode": "ENTER CODE",
+  "verifyNote": "The verification code has been sent to your email",
+  "verifyiEx": "*****@gmail.com",
+  "verify": "Verify",
+  "alert": "Do you want to save your preferences for language and dark mode to local storage?"
+}

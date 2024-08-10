@@ -62,7 +62,7 @@
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  width: 160px;
+  /* width: 160px; */
   margin: 15px 0 10px 0;
 }
 

@@ -1,0 +1,20 @@
+{
+  "signup": "Anmelden",
+  "haveAnAcc": "haben Sie ein Konto?",
+  "pass": "Passwort",
+  "rePass": "Passwort bestätigen",
+  "usrName": "Benutzername",
+  "phonNumber": "Telefonnummer",
+  "email": "E-Mail",
+  "uplodfile": "Zertifikat hochladen",
+  "login": "einloggen",
+  "dontHvANAcc": "kein Konto?",
+  "fogetPass": "Passwort vergessen",
+  "logout": "ausloggen",
+  "welcome": "Willkommen in unserem Geschäft",
+  "enterCode": "CODE EINGEBEN",
+  "verifyNote": "Der Bestätigungscode wurde an Ihre E-Mail gesendet",
+  "verifyiEx": "*****@gmail.com",
+  "verify": "Überprüfen",
+  "alert": "Möchten Sie Ihre Einstellungen für Sprache und den Dunkelmodus im lokalen Speicher speichern?"
+}

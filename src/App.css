@@ -13,3 +13,31 @@ a {
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
 /* End global format*/
+.App {
+  text-align: center;
+  transition: 0.3s, color 0.3s;
+}
+
+.App.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.dark-mode {
+  background: linear-gradient(
+    109deg,
+    #7c8761 -21.51%,
+    #3d5f3d 36.42%,
+    rgb(14 52 14 / 90%) 87.8%
+  ) !important;
+  color: #ffffff;
+}
+
+/*  */
+/*  */
+/*  */
+/*  */
+
+.arbic-direction {
+  flex-direction: row-reverse;
+}
