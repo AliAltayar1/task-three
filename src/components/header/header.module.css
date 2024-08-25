@@ -54,35 +54,6 @@ body.dark-mode {
   align-items: center;
 }
 
-.toggleSwitch {
-  width: 60px;
-  height: 30px;
-  background-color: #80af81;
-  border-radius: 15px;
-  position: relative;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.toggleSwitch.active {
-  background-color: #3d5f3d;
-}
-
-.toggleKnob {
-  width: 26px;
-  height: 26px;
-  background-color: #fff;
-  border-radius: 50%;
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  transition: left 0.3s;
-}
-
-.toggleSwitch.active .toggleKnob {
-  left: 32px;
-}
-
 .container {
   border-radius: 15px;
 }
@@ -119,4 +90,39 @@ body.dark-mode {
   display: flex;
   justify-content: space-between;
   gap: 15px;
+}
+
+.headerContanier .logout {
+  color: #fff;
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 16px;
+  border: 1px solid #fcfcfc;
+  background: rgba(124, 135, 97, 0.67);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 300px) {
+  .langAndMode {
+    gap: 2px;
+  }
+
+  select {
+    padding: 5px 1px;
+  }
+
+  .headerContanier .logout {
+    font-size: 10px;
+    padding: 2px 5px;
+  }
+}
+
+.icon {
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
 }

@@ -1,4 +1,3 @@
-import styles from "./Welcome.module.css";
 import WelcomeBox from "./welcome-box/WelcomeBox";
 import Header from "../header/header";
 import { DarkModeContext } from "../../DarkModeContext";

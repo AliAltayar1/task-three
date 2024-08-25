@@ -9,9 +9,15 @@ const WelcomeBox = () => {
   return (
     <>
       <div className={`${styles1.WelcomeBox} ${styles2.formContanier}`}>
-        <Link to="/login">
-          <button>{t("logout")}</button>
-        </Link>
+        <div>
+          <Link to="/login">
+            <button>{t("logout")}</button>
+          </Link>
+          <Link to="/landing">
+            <button>{t("home")}</button>
+          </Link>
+        </div>
+
         <p>{t("welcome")}</p>
         <div className={styles1.imgContanier}>
           <div className={styles1.img}>

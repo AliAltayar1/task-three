@@ -1,4 +1,3 @@
-import styles from "./Verification.module.css";
 import Header from "../header/header";
 import LoginForm from "./verification-form/VerificationForm";
 import { DarkModeContext } from "../../DarkModeContext";

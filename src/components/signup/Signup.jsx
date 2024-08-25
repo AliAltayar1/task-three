@@ -1,4 +1,3 @@
-import styles from "./Signup.module.css";
 import Header from "../header/header";
 import SingupForm from "./signup-form/SignupForm";
 import { DarkModeContext } from "../../DarkModeContext";

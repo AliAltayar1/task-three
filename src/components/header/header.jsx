@@ -7,6 +7,8 @@ import CustomAlert from "./CustomAlert";
 import SubHeader from "./subheader/SubHeader";
 import BurgerIcon from "./subheader/BurgerIcon";
 import { useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { FaSun, FaMoon } from "react-icons/fa";
 
 export default function Header() {
   const location = useLocation();
@@ -101,19 +103,19 @@ export default function Header() {
           </select>
         </div>
 
-        <div
-          className={`${styles.container} ${darkMode ? "dark-mode" : ""}`}
-          onClick={handleToggleDarkMode}
-        >
-          <div
-            className={`${styles.toggleSwitch} ${
-              darkMode ? styles.active : ""
-            }`}
-            id="toggleSwitch"
-          >
-            <div className={`${styles.toggleKnob}`}></div>
-          </div>
+        <div className={`${styles.container} `} onClick={handleToggleDarkMode}>
+          {darkMode ? (
+            <FaMoon className={styles.icon} />
+          ) : (
+            <FaSun className={styles.icon} />
+          )}
         </div>
+
+        {!isAuth && (
+          <Link className={styles.logout} to={"/login"}>
+            {t("logout")}
+          </Link>
+        )}
       </div>
       {showAlert && (
         <CustomAlert
