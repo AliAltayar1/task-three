@@ -1,4 +1,5 @@
-import styles from "./VerificationForm.module.css";
+import styles1 from "./VerificationForm.module.css";
+import styles2 from "../../../component.module.css";
 import VerificationCode from "./verification-code/VerificationCode";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
@@ -8,9 +9,9 @@ const VerificationForm = () => {
 
   return (
     <>
-      <div className={styles.singupform}>
+      <div className={` ${styles1.verificationform} ${styles2.formContanier}`}>
         <h1>{t("enterCode")}</h1>
-        <div className={styles.icon}>
+        <div className={styles2.icon}>
           <svg
             width="30"
             height="30"
@@ -24,12 +25,12 @@ const VerificationForm = () => {
             />
           </svg>
         </div>
-        <div className={styles.content}>
+        <div className={styles1.content}>
           <p>{t("verifyNote")}</p>
           <span>{t("verifyiEx")}</span>
         </div>
         <VerificationCode></VerificationCode>
-        <Link to="/welcome" className={styles.welcomeRoute}>
+        <Link to="/welcome" className={styles1.welcomeRoute}>
           <button>{t("verify")}</button>
         </Link>
       </div>

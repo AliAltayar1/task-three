@@ -1,0 +1,80 @@
+.contactContanier {
+  margin-bottom: 100px;
+}
+.contactContanier h1 {
+  color: #fff;
+  font-family: Poppins;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  margin-bottom: 80px;
+}
+
+.formContanier {
+  display: flex;
+  border-radius: 50px;
+  overflow: hidden;
+}
+.formContanier .form {
+  padding: 50px;
+  background: rgba(255, 255, 255, 0.44);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.form h2 {
+  font-family: Poppins;
+  font-size: 36px;
+  background: linear-gradient(180deg, #508d4e -14.81%, #161313 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px;
+}
+
+.form div {
+  display: flex;
+  gap: 20px;
+}
+
+.formContanier button {
+  margin: 31px 0;
+  padding: 12px 0px;
+  border-radius: 45px;
+  border: 1px solid #fcfcfc;
+  background: rgba(124, 135, 97, 0.67);
+  color: #fff;
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+}
+
+.formContanier .imgContanier {
+  position: relative;
+  width: 350px;
+  height: 550px;
+}
+.formContanier .imgContanier img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 700px) {
+  .formContanier .imgContanier {
+    display: none;
+  }
+  .formContanier .form {
+    gap: 20px;
+  }
+}

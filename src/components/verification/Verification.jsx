@@ -10,10 +10,12 @@ const Verification = () => {
   const { isArabic } = useContext(DirectionContext);
   return (
     <>
-      <div className={`${styles.contanier} ${darkMode ? "dark-mode" : ""}`}>
+      <div className={` contanier ${darkMode ? "dark-mode" : ""}`}>
         <Header />
-        <div className={`${isArabic ? "arbic-direction" : ""} ${styles.login}`}>
-          <div className={styles.imgContanier}>
+        <div
+          className={`${isArabic ? "arbic-direction" : ""} content-contanier`}
+        >
+          <div className={`imgContanier`}>
             <img
               src={`${process.env.PUBLIC_URL}/Rectangle16.png`}
               alt="login-photo"

@@ -1,5 +1,5 @@
 .loginform {
-  display: flex;
+  /* display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -11,7 +11,7 @@
   backdrop-filter: blur(48px);
   padding: 0 120px;
   flex: 1;
-  z-index: 1;
+  z-index: 1; */
   animation: moveApart 2s forwards;
 }
 @keyframes moveApart {
@@ -23,7 +23,7 @@
   }
 }
 
-@media (min-width: 1350px) {
+/* @media (min-width: 1350px) {
   .loginform {
     padding: 0 150px;
   }
@@ -51,13 +51,13 @@
   .loginform {
     padding: 0 40px;
   }
-}
+} */
 
 .loginform .loginRoute {
   width: 100%;
 }
 
-.loginform h1 {
+/* .loginform h1 {
   text-align: center;
   font-family: Poppins;
   font-size: 36px;
@@ -66,7 +66,6 @@
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  /* width: 160px; */
   margin: 15px 0 70px 0;
 }
 
@@ -80,17 +79,17 @@
   .loginform h1 {
     margin-bottom: 10px;
   }
-}
+} */
 
-.loginform .inputs {
+/* .loginform .inputs {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   width: 100%;
-}
+} */
 
-.loginform input {
+/* .loginform input {
   color: #d6efd8;
   background-color: transparent;
   border: 0;
@@ -99,13 +98,13 @@
   outline: none;
   padding: 21px 2px 3px;
   width: 100%;
-}
-
+} */
+/* 
 .loginform input::placeholder {
   color: #d6efd8;
-}
+} */
 
-.loginform button {
+/* .loginform button {
   margin: 31px 0;
   padding: 12px 0px;
   border-radius: 45px;
@@ -117,7 +116,7 @@
   font-weight: 600;
   cursor: pointer;
   width: 100%;
-}
+} */
 
 .loginform .help {
   text-align: center;

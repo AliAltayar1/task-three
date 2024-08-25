@@ -1,5 +1,5 @@
-.singupform {
-  display: flex;
+.verificationform {
+  /* display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -11,6 +11,7 @@
   backdrop-filter: blur(48px);
   padding: 0 120px;
   flex: 1;
+  z-index: 1; */
   animation: moveApart 2s forwards;
 }
 
@@ -22,6 +23,7 @@
     transform: translateX(0px);
   }
 }
+/*
 
 @media (min-width: 1350px) {
   .singupform {
@@ -51,9 +53,9 @@
   .singupform {
     padding: 0 40px;
   }
-}
+} */
 
-.singupform h1 {
+/* .verificationform h1 {
   text-align: center;
   font-family: Poppins;
   font-size: 36px;
@@ -65,18 +67,18 @@
 }
 
 @media (max-width: 950px) {
-  .singupform h1 {
+  .verificationform h1 {
     margin-bottom: 40px;
   }
 }
 
 @media (max-width: 500px) {
-  .singupform h1 {
+  .verificationform h1 {
     margin-bottom: 10px;
   }
-}
+} */
 
-.singupform .icon {
+/* .verificationform .icon {
   background-color: rgba(217, 217, 217, 0.41);
   border-radius: 50%;
   width: 100px;
@@ -85,9 +87,9 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 15px;
-}
+} */
 
-.singupform .content {
+.content {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -112,7 +114,7 @@
   margin-bottom: 25px;
 }
 
-.singupform .code {
+.code {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -120,12 +122,12 @@
 }
 
 @media (max-width: 525px) {
-  .singupform .code {
+  .code {
     flex-wrap: wrap;
   }
 }
 
-.singupform .code input {
+.code input {
   width: 44px;
   height: 40px;
   background-color: #d6efd8;
@@ -140,16 +142,17 @@
 }
 
 @media (max-width: 550px) {
-  .singupform .code input {
+  .code input {
     height: 30px;
     width: 32px;
   }
 }
 
-.singupform .welcomeRoute {
+.verificationform .welcomeRoute {
   width: 100%;
 }
-.singupform button {
+
+/* .verificationform .welcomeRoute button {
   margin: 31px 0;
   padding: 12px 0px;
   border-radius: 45px;
@@ -161,4 +164,4 @@
   font-weight: 600;
   cursor: pointer;
   width: 100%;
-}
+} */

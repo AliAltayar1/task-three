@@ -1,4 +1,5 @@
-import styles from "./SignupForm.module.css";
+import styles1 from "./SignupForm.module.css";
+import styles2 from "../../../component.module.css";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
@@ -7,9 +8,9 @@ const SingupForm = () => {
 
   return (
     <>
-      <div className={styles.singupform}>
+      <div className={`${styles1.singupform} ${styles2.formContanier}`}>
         <h1>{t("signup")}</h1>
-        <div className={styles.icon}>
+        <div className={styles2.icon}>
           <svg
             width="45"
             height="40"
@@ -38,7 +39,7 @@ const SingupForm = () => {
             </g>
           </svg>
         </div>
-        <div className={styles.inputs}>
+        <div className={`${styles1.inputs} ${styles2.inputs}`}>
           <div>
             <input type="text" placeholder={t("usrName")} />
             <input type="text" placeholder={t("phonNumber")} />
@@ -52,13 +53,13 @@ const SingupForm = () => {
             <input type="text" placeholder={t("uplodfile")} />
           </div>
         </div>
-        <Link to="/verification" className={styles.verificationRoute}>
+        <Link to="/verification" className={styles1.verificationRoute}>
           <button>{t("signup")}</button>
         </Link>
-        <div className={styles.help}>
+        <div className={styles1.help}>
           <div>
             <p>{t("haveAnAcc")} </p>
-            <Link to="/login" className={styles.login}>
+            <Link to="/login" className={styles1.login}>
               {t("login")}
             </Link>
           </div>

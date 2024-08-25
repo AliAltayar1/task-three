@@ -1,0 +1,31 @@
+.starsWithoutBlur .first {
+  position: absolute;
+  top: 185px;
+  left: 50px;
+  filter: blur(2px);
+  width: 20px;
+}
+.starsWithoutBlur .second {
+  position: absolute;
+  top: 580px;
+  left: 50px;
+  filter: blur(2px);
+  width: 20px;
+}
+.starsWithoutBlur .third {
+  position: absolute;
+  top: 445px;
+  filter: blur(2px);
+}
+.starsWithoutBlur .fourth {
+  position: absolute;
+  top: 675px;
+  right: 150px;
+}
+.starsWithoutBlur .fifth {
+  position: absolute;
+  top: 225px;
+  right: 500px;
+  width: 30px;
+  filter: blur(2px);
+}

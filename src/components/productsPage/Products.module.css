@@ -1,0 +1,36 @@
+.product .contentContanier {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.product h1 {
+  color: #fff;
+  font-family: Poppins;
+  font-size: 30px;
+  font-weight: 400;
+  text-decoration-line: underline;
+  text-transform: uppercase;
+}
+
+.product .navigateDots {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.navigateDots div {
+  background-color: white;
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+
+.navigateDots div.active {
+  background-color: #1a5319;
+}

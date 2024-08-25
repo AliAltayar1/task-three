@@ -4,8 +4,16 @@ import styles from "./header.module.css";
 import { DarkModeContext } from "../../DarkModeContext";
 import { DirectionContext } from "../../DirectionContext";
 import CustomAlert from "./CustomAlert";
+import SubHeader from "./subheader/SubHeader";
+import BurgerIcon from "./subheader/BurgerIcon";
+import { useLocation } from "react-router-dom";
 
 export default function Header() {
+  const location = useLocation();
+
+  const authPaths = ["/signup", "/login", "/verification", "/welcome"];
+  const isAuth = authPaths.includes(location.pathname);
+
   const { t, i18n } = useTranslation();
 
   // Contexts
@@ -71,35 +79,42 @@ export default function Header() {
   };
   return (
     <div className={styles.headerContanier}>
-      <div className={styles.logo}>logo</div>
+      {!isAuth && <BurgerIcon />}
 
-      <div>
-        <select
-          name=""
-          id="language"
-          className={`${darkMode ? styles.darkModeSelection : ""}`}
-          onChange={handleLanguageChange}
-          value={language}
-        >
-          <option value="en">English</option>
-          <option value="ar">Arabic</option>
-          <option value="fr">French</option>
-          <option value="de">German</option>
-        </select>
-      </div>
+      <div className={styles.logo}>{t("logo")}</div>
 
-      <div
-        className={`${styles.container} ${darkMode ? "dark-mode" : ""}`}
-        onClick={handleToggleDarkMode}
-      >
+      {!isAuth && <SubHeader />}
+
+      <div className={styles.langAndMode}>
+        <div>
+          <select
+            name=""
+            id="language"
+            className={`${darkMode ? styles.darkModeSelection : ""}`}
+            onChange={handleLanguageChange}
+            value={language}
+          >
+            <option value="en">{t("en")}</option>
+            <option value="ar">{t("ar")}</option>
+            <option value="fr">{t("fr")}</option>
+            <option value="de">{t("de")}</option>
+          </select>
+        </div>
+
         <div
-          className={`${styles.toggleSwitch} ${darkMode ? styles.active : ""}`}
-          id="toggleSwitch"
+          className={`${styles.container} ${darkMode ? "dark-mode" : ""}`}
+          onClick={handleToggleDarkMode}
         >
-          <div className={`${styles.toggleKnob}`}></div>
+          <div
+            className={`${styles.toggleSwitch} ${
+              darkMode ? styles.active : ""
+            }`}
+            id="toggleSwitch"
+          >
+            <div className={`${styles.toggleKnob}`}></div>
+          </div>
         </div>
       </div>
-
       {showAlert && (
         <CustomAlert
           message={`${t("alert")}`}

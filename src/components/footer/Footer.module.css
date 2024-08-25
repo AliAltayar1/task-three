@@ -1,0 +1,109 @@
+.footer {
+  background: linear-gradient(
+    86deg,
+    rgb(115 150 109) 100%,
+    rgba(214, 239, 216, 0.4) 350%
+  );
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 30px;
+  width: calc(100% - 40px);
+  padding: 20px;
+}
+
+.footer .logo h2 {
+  color: #fff;
+  font-family: Pristina;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 20px;
+}
+
+.footer .logo p {
+  color: #fff;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  max-width: 300px;
+}
+
+.footer > div:not(:first-child) h2 {
+  color: #fff;
+  font-family: Poppins;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration-line: underline;
+  text-transform: uppercase;
+}
+
+.footer .links div {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.footer .links a,
+.footer .contactUs span {
+  color: #fff;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+.footer .contactUs > div {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 5px;
+  margin-top: 20px;
+}
+
+.footer .contactUs div div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer .social div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+.footer .social div span {
+  background-color: transparent;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 3px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer .social div svg {
+  width: 15x;
+  height: 15px;
+}
+
+@media (max-width: 650px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer .contactUs > div {
+    align-items: center;
+  }
+}

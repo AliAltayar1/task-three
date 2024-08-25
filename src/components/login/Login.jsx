@@ -10,11 +10,13 @@ const Login = () => {
   const { isArabic } = useContext(DirectionContext);
   return (
     <>
-      <div className={`${styles.contanier} ${darkMode ? "dark-mode" : ""}`}>
+      <div className={` contanier ${darkMode ? "dark-mode" : ""}`}>
         <Header />
-        <div className={`${isArabic ? "arbic-direction" : ""} ${styles.login}`}>
+        <div
+          className={`${isArabic ? "arbic-direction" : ""}  content-contanier`}
+        >
           <LoginForm></LoginForm>
-          <div className={styles.imgContanier}>
+          <div className={` imgContanier ${styles.imgContanier}`}>
             <img
               src={`${process.env.PUBLIC_URL}/Rectangle16.png`}
               alt="login-photo"

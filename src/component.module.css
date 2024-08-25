@@ -1,0 +1,118 @@
+.formContanier {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 55px;
+  border: 1px solid rgba(241, 241, 241, 0.48);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 47px -47px 47px 0px rgba(194, 194, 194, 0.1) inset,
+    -47px 47px 47px 0px rgba(255, 255, 255, 0.1) inset;
+  backdrop-filter: blur(48px);
+  padding: 0 120px;
+  flex: 1;
+  z-index: 1;
+}
+
+@media (min-width: 1350px) {
+  .formContanier {
+    padding: 0 150px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .formContanier {
+    padding: 0 80px;
+  }
+}
+
+@media (max-width: 950px) {
+  .formContanier {
+    padding: 0 40px;
+  }
+}
+
+@media (max-width: 840px) {
+  .formContanier {
+    padding: 0 80px;
+  }
+}
+
+@media (max-width: 500px) {
+  .formContanier {
+    padding: 0 40px;
+  }
+}
+
+.formContanier h1 {
+  text-align: center;
+  font-family: Poppins;
+  font-size: 36px;
+  font-weight: 800;
+  background: linear-gradient(180deg, #508d4e -14.81%, #161313 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 15px 0 70px 0;
+}
+
+@media (max-width: 950px) {
+  .formContanier h1 {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 500px) {
+  .formContanier h1 {
+    margin-bottom: 10px;
+  }
+}
+
+.formContanier .icon {
+  background-color: rgba(217, 217, 217, 0.41);
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.formContanier .inputs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.inputs input {
+  color: #d6efd8;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid #1a5319;
+  font-size: 14px;
+  outline: none;
+  padding: 21px 2px 3px;
+  width: 100%;
+  text-transform: uppercase;
+}
+
+.inputs input::placeholder {
+  color: #d6efd8;
+}
+
+.formContanier button {
+  margin: 31px 0;
+  padding: 12px 0px;
+  border-radius: 45px;
+  border: 1px solid #fcfcfc;
+  background: rgba(124, 135, 97, 0.67);
+  color: #fff;
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+}

@@ -1,5 +1,5 @@
 .singupform {
-  display: flex;
+  /* display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -10,7 +10,7 @@
     -47px 47px 47px 0px rgba(255, 255, 255, 0.1) inset;
   backdrop-filter: blur(48px);
   padding: 0 120px;
-  flex: 1;
+  flex: 1; */
   animation: moveApart 2s forwards;
 }
 
@@ -23,7 +23,7 @@
   }
 }
 
-@media (min-width: 1350px) {
+/* @media (min-width: 1350px) {
   .singupform {
     padding: 0 150px;
   }
@@ -51,9 +51,9 @@
   .singupform {
     padding: 0 40px;
   }
-}
+} */
 
-.singupform h1 {
+/* .singupform h1 {
   text-align: center;
   font-family: Poppins;
   font-size: 36px;
@@ -62,7 +62,6 @@
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  /* width: 160px; */
   margin: 15px 0 10px 0;
 }
 
@@ -76,9 +75,9 @@
   .singupform h1 {
     margin-bottom: 10px;
   }
-}
+} */
 
-.singupform .icon {
+/* .singupform .icon {
   background-color: rgba(217, 217, 217, 0.41);
   border-radius: 50%;
   width: 100px;
@@ -87,15 +86,15 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 15px;
-}
+} */
 
-.singupform .inputs {
+/* .singupform .inputs {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   width: 100%;
-}
+} */
 
 .singupform .inputs div {
   display: flex;
@@ -110,7 +109,7 @@
   }
 }
 
-.singupform input {
+/* .singupform input {
   color: #d6efd8;
   background-color: transparent;
   border: 0;
@@ -119,17 +118,17 @@
   outline: none;
   padding: 21px 2px 3px;
   width: 100%;
-}
-
+} */
+/* 
 .singupform input::placeholder {
   color: #d6efd8;
-}
+} */
 
 .singupform .verificationRoute {
   width: 100%;
 }
 
-.singupform button {
+/* .singupform button {
   margin: 31px 0;
   padding: 12px 0px;
   border-radius: 45px;
@@ -141,7 +140,7 @@
   font-weight: 600;
   cursor: pointer;
   width: 100%;
-}
+} */
 
 .singupform .help {
   text-align: center;

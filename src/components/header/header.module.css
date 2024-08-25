@@ -4,6 +4,8 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  position: relative;
+  z-index: 2;
 }
 
 .logo {
@@ -13,6 +15,7 @@
   font-weight: 400;
   margin: 0;
   align-self: start;
+  align-self: center;
 }
 
 select {
@@ -110,4 +113,10 @@ body.dark-mode {
   outline: none;
   border: none;
   cursor: pointer;
+}
+
+.langAndMode {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
 }

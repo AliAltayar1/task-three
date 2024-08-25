@@ -11,12 +11,12 @@ const Singup = () => {
 
   return (
     <>
-      <div className={`${styles.contanier} ${darkMode ? "dark-mode" : ""}`}>
+      <div className={` contanier ${darkMode ? "dark-mode" : ""}`}>
         <Header />
         <div
-          className={`${isArabic ? "arbic-direction" : ""} ${styles.signup}`}
+          className={`${isArabic ? "arbic-direction" : ""} content-contanier`}
         >
-          <div className={styles.imgContanier}>
+          <div className={`imgContanier`}>
             <img
               src={`${process.env.PUBLIC_URL}/Rectangle16.png`}
               alt="login-photo"

@@ -8,9 +8,9 @@ const Login = () => {
   const { darkMode } = useContext(DarkModeContext);
   return (
     <>
-      <div className={`${styles.contanier} ${darkMode ? "dark-mode" : ""}`}>
+      <div className={`contanier ${darkMode ? "dark-mode" : ""}`}>
         <Header />
-        <div className={styles.welcome}>
+        <div className={`content-contanier`}>
           <WelcomeBox></WelcomeBox>
         </div>
       </div>

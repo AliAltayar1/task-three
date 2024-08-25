@@ -1,4 +1,4 @@
-.welcomebox {
+/* .welcomebox {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -41,14 +41,14 @@
   .welcomebox {
     padding: 0 40px;
   }
-}
+} */
 
-.welcomebox a {
+.WelcomeBox a {
   align-self: flex-end;
 }
 
-.welcomebox button {
-  margin: 31px 0 0;
+.WelcomeBox button {
+  /* margin: 31px 0 0;
   border-radius: 45px;
   border: 1px solid #fcfcfc;
   background: rgba(124, 135, 97, 0.67);
@@ -56,24 +56,25 @@
   font-family: Poppins;
   font-size: 14px;
   font-weight: 600;
-  cursor: pointer;
+  cursor: pointer; */
+  padding: 0;
   width: 170px;
   height: 45px;
 }
 
 @media (max-width: 580px) {
-  .welcomebox button {
+  .WelcomeBox button {
     width: 120px;
   }
 }
 @media (max-width: 330px) {
-  .welcomebox button {
+  .WelcomeBox button {
     width: 120px;
     align-self: center;
   }
 }
 
-.welcomebox p {
+.WelcomeBox p {
   text-align: center;
   font-family: Poppins;
   font-size: 36px;
@@ -86,23 +87,23 @@
 }
 
 @media (max-width: 770px) {
-  .welcomebox p {
+  .WelcomeBox p {
     margin: 60px 0;
   }
 }
 @media (max-width: 580px) {
-  .welcomebox p {
+  .WelcomeBox p {
     margin: 30px 0 20px;
   }
 }
 
-.welcomebox .imgContanier {
+.WelcomeBox .imgContanier {
   display: flex;
   align-items: center;
   margin-bottom: 30px;
   width: 100%;
 }
-.welcomebox .imgContanier .img {
+.WelcomeBox .imgContanier .img {
   width: 100%;
   height: 150px;
   display: flex;
@@ -110,12 +111,12 @@
   align-items: center;
 }
 @media (max-width: 430px) {
-  .welcomebox .imgContanier .img {
+  .WelcomeBox .imgContanier .img {
     height: 95px;
   }
 }
 
-.welcomebox .img img {
+.WelcomeBox .img img {
   width: 100%;
   height: 100%;
   object-fit: contain;

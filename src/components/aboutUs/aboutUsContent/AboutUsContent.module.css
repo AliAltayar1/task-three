@@ -1,0 +1,66 @@
+.aboutUsContanier {
+}
+
+.aboutUsContanier h1 {
+  color: #fff;
+  font-family: Poppins;
+  font-size: 30px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.aboutUsContanier > p {
+  color: #fff;
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin: 40px 0 40px;
+}
+
+.aboutUsContanier > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.aboutUsContanier div div {
+  border-radius: 25px;
+  border: 1px solid #1a5319;
+  width: 320px;
+  height: 400px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 1px 3px 0px #d6efd8;
+}
+
+@media (max-width: 550px) {
+  .aboutUsContanier div div {
+    width: 250px;
+  }
+}
+@media (max-width: 350px) {
+  .aboutUsContanier div div {
+    width: 180px;
+  }
+}
+
+.aboutUsContanier h3 {
+  color: #d6efd8;
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.aboutUsContanier div p {
+  color: #d6efd8;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: capitalize;
+}
