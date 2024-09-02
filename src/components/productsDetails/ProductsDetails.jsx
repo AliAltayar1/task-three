@@ -1,5 +1,5 @@
 import Header from "../header/header";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { DarkModeContext } from "../../DarkModeContext";
 import { DirectionContext } from "../../DirectionContext";
 import ProductsDetailsContent from "./productsDetailsContent/ProductsDetailsContent";
@@ -9,10 +9,19 @@ import Stars from "../stars/Stars";
 import styles from "./ProductsDetails.module.css";
 import Frame from "../frame/frame";
 import Footer from "../footer/Footer";
+import { getToken } from "../../authService";
+import { useNavigate } from "react-router-dom";
 
 const ProductsDetails = () => {
   const { darkMode } = useContext(DarkModeContext);
   const { isArabic } = useContext(DirectionContext);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!getToken()) {
+      navigate("/login");
+    }
+  }, []);
   return (
     <>
       <div className={` contanier ${darkMode ? "dark-mode" : ""}`}>

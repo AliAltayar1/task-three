@@ -1,5 +1,6 @@
 .loginform {
   animation: moveApart 2s forwards;
+  position: relative;
 }
 @keyframes moveApart {
   0% {
@@ -8,6 +9,10 @@
   100% {
     transform: translateX(0px);
   }
+}
+
+.loginform form {
+  width: 100%;
 }
 
 .loginform .loginRoute {

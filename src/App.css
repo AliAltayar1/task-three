@@ -117,3 +117,10 @@ a {
   align-items: center;
   width: 100%;
 }
+
+.responseAndErrorMsg {
+  font-size: 16px;
+  font-family: Poppins;
+  margin-top: 20px;
+  font-weight: 600;
+}

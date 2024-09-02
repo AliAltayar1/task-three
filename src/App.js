@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   HashRouter as Router,
   Route,
   Routes,
   Navigate,
+  useLocation,
 } from "react-router-dom";
 import "./App.css";
 import Login from "./components/login/Login";
@@ -17,19 +18,28 @@ import OfferPage from "./components/offerPage/OfferPage";
 import ProductsDetails from "./components/productsDetails/ProductsDetails";
 import { DarkModeProvider } from "./DarkModeContext";
 import { DirectionProvider } from "./DirectionContext";
+import { EmailProvider } from "./EmailContext";
+import { getToken, refreshAuthToken } from "./authService";
 
 function App() {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (getToken()) {
+      refreshAuthToken();
+    }
+  }, [location]);
+
   return (
-    <Router>
+    <div className="App">
       <DarkModeProvider>
         <DirectionProvider>
-          <div className="App">
+          <EmailProvider>
             <Routes>
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<Signup />} />
               <Route path="/verification" element={<Verification />} />
               <Route path="/welcome" element={<Welcome />} />
-
               <Route path="/productsDetails" element={<ProductsDetails />} />
               <Route path="/offerPage" element={<OfferPage />} />
               <Route path="/cart" element={<OrderDetails />} />
@@ -37,11 +47,17 @@ function App() {
               <Route path="/checkout" element={<Checkout />} />
               <Route path="*" element={<Navigate to="/signup" />} />
             </Routes>
-          </div>
+          </EmailProvider>
         </DirectionProvider>
       </DarkModeProvider>
-    </Router>
+    </div>
   );
 }
 
-export default App;
+export default function RootApp() {
+  return (
+    <Router>
+      <App />
+    </Router>
+  );
+}

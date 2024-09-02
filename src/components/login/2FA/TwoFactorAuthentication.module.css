@@ -1,0 +1,51 @@
+.twoFactorAuth {
+  position: absolute;
+  z-index: 20;
+  transition: 0.2s;
+  display: none;
+}
+.twoFactorAuth.show {
+  display: block;
+}
+.twoFactorAuth span {
+  font-family: Poppins;
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  cursor: pointer;
+  color: #d6efd8;
+}
+.twoFactorAuth form {
+  background-color: #3d5f3d;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.twoFactorAuth h1 {
+  text-align: center;
+  color: #d6efd8;
+  font-family: Poppins;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.twoFactorAuth div {
+  width: 100%;
+}
+
+.twoFactorAuth button {
+  padding: 8px 0px;
+  border-radius: 45px;
+  border: 1px solid #fcfcfc;
+  background: rgba(124, 135, 97, 0.67);
+  color: #fff;
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+}

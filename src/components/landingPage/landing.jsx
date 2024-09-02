@@ -9,9 +9,19 @@ import { DarkModeContext } from "../../DarkModeContext";
 import { useContext } from "react";
 import Footer from "../footer/Footer";
 import styles from "./landing.module.css";
+import { useEffect } from "react";
+import { getToken } from "../../authService";
+import { useNavigate } from "react-router-dom";
 
 const Landing = () => {
   const { darkMode } = useContext(DarkModeContext);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!getToken()) {
+      navigate("/login");
+    }
+  }, []);
 
   return (
     <>

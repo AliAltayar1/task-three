@@ -1,7 +1,6 @@
 import styles1 from "./VerificationForm.module.css";
 import styles2 from "../../../component.module.css";
 import VerificationCode from "./verification-code/VerificationCode";
-import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 const VerificationForm = () => {
@@ -30,9 +29,6 @@ const VerificationForm = () => {
           <span>{t("verifyiEx")}</span>
         </div>
         <VerificationCode></VerificationCode>
-        <Link to="/welcome" className={styles1.welcomeRoute}>
-          <button>{t("verify")}</button>
-        </Link>
       </div>
     </>
   );

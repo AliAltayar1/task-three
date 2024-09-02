@@ -36,7 +36,7 @@
   margin-bottom: 25px;
 }
 
-.code {
+.code form > div:first-child {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -44,7 +44,7 @@
 }
 
 @media (max-width: 525px) {
-  .code {
+  .code form {
     flex-wrap: wrap;
   }
 }
@@ -68,6 +68,14 @@
     height: 30px;
     width: 32px;
   }
+}
+
+.code form button:first-child {
+  margin-bottom: 0;
+  margin-top: 20px;
+}
+.code form button:nth-child(2) {
+  margin-top: 10px;
 }
 
 .verificationform .welcomeRoute {

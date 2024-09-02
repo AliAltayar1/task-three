@@ -6,12 +6,14 @@ import { DirectionContext } from "../../DirectionContext";
 import CustomAlert from "./CustomAlert";
 import SubHeader from "./subheader/SubHeader";
 import BurgerIcon from "./subheader/BurgerIcon";
-import { useLocation } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { FaSun, FaMoon } from "react-icons/fa";
+import { getToken, logout, removeToken } from "../../authService";
+import { useNavigate } from "react-router-dom";
 
 export default function Header() {
   const location = useLocation();
+  const navigate = useNavigate();
 
   const authPaths = ["/signup", "/login", "/verification", "/welcome"];
   const isAuth = authPaths.includes(location.pathname);
@@ -30,6 +32,32 @@ export default function Header() {
     localStorage.getItem("hasConfirmed") === "true"
   );
   const [showAlert, setShowAlert] = useState(false);
+
+  const [responseMessage, setResponseMessage] = useState("");
+  const [error, setError] = useState(null);
+
+  const handleSubmit = async () => {
+    if (!getToken()) {
+      navigate("/login");
+    } else
+      try {
+        const response = await logout();
+
+        if (response?.success) {
+          setResponseMessage("User information sent successfully!");
+          setError(null);
+          removeToken("token");
+          navigate("/login");
+        }
+        //  else {
+        //   setError("Failed to send user information. Please try again.");
+        //   setResponseMessage("");
+        // }
+      } catch (error) {
+        // setError("An error occurred while sending user information.");
+        // setResponseMessage("");
+      }
+  };
 
   // Effect to handle language and direction changes
   useEffect(() => {
@@ -112,9 +140,9 @@ export default function Header() {
         </div>
 
         {!isAuth && (
-          <Link className={styles.logout} to={"/login"}>
+          <button onClick={handleSubmit} className={styles.logout}>
             {t("logout")}
-          </Link>
+          </button>
         )}
       </div>
       {showAlert && (

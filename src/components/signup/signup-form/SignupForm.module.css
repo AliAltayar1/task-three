@@ -10,6 +10,12 @@
     transform: translateX(0px);
   }
 }
+.singupform form {
+  width: 100%;
+}
+.singupform form .inputs > div {
+  width: 100%;
+}
 
 .singupform .inputs div {
   display: flex;

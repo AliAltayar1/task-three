@@ -1,10 +1,70 @@
 import styles1 from "./SignupForm.module.css";
 import styles2 from "../../../component.module.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { useState, useContext } from "react";
+import { EmailContext } from "../../../EmailContext";
+import { register } from "../../../authService";
 
-const SingupForm = () => {
+const SignupForm = () => {
   const { t } = useTranslation();
+  const { setEmail } = useContext(EmailContext);
+  const navigate = useNavigate();
+
+  const [formData, setFormData] = useState({
+    user_name: "",
+    email: "",
+    phone_number: "",
+    password: "",
+    password_confirmation: "",
+    // profile_photo: null, // For file input
+    // certificate: null, // For file input
+  });
+
+  const [responseMessage, setResponseMessage] = useState("");
+  const [error, setError] = useState(null);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const formDataToSend = new FormData();
+
+    formDataToSend.append("user_name", formData.user_name);
+    formDataToSend.append("email", formData.email);
+    formDataToSend.append("phone_number", formData.phone_number);
+    formDataToSend.append("password", formData.password);
+    formDataToSend.append(
+      "password_confirmation",
+      formData.password_confirmation
+    );
+
+    try {
+      // Await the register function to get a response
+      const res = await register(formDataToSend);
+
+      // Handle the response based on the backend response structure
+      if (res?.success) {
+        setEmail(formData.email);
+        setResponseMessage(res["statue message "]);
+        setError(null);
+        navigate("/verification");
+      } else {
+        setError(res.message[0]);
+        setResponseMessage("");
+      }
+    } catch (error) {
+      setError(error.message);
+      setResponseMessage("");
+    }
+  };
 
   return (
     <>
@@ -39,23 +99,72 @@ const SingupForm = () => {
             </g>
           </svg>
         </div>
-        <div className={`${styles1.inputs} ${styles2.inputs}`}>
-          <div>
-            <input type="text" placeholder={t("usrName")} />
-            <input type="text" placeholder={t("phonNumber")} />
+        <form onSubmit={handleSubmit}>
+          <div className={`${styles1.inputs} ${styles2.inputs}`}>
+            <div>
+              <input
+                type="text"
+                name="user_name"
+                value={formData.user_name}
+                onChange={handleChange}
+                required
+                placeholder={t("usrName")}
+              />
+              <input
+                type="text"
+                name="phone_number"
+                value={formData.phone_number}
+                onChange={handleChange}
+                required
+                placeholder={t("phonNumber")}
+              />
+            </div>
+            <div>
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+                placeholder={t("email")}
+              />
+              <input
+                type="password"
+                name="password"
+                value={formData.password}
+                onChange={handleChange}
+                required
+                placeholder={t("pass")}
+              />
+            </div>
+            <div>
+              <input
+                type="password"
+                name="password_confirmation"
+                value={formData.password_confirmation}
+                onChange={handleChange}
+                required
+                placeholder={t("rePass")}
+              />
+              <input
+                type="text"
+                name="certificate"
+                placeholder="Upload Certificate"
+              />
+            </div>
           </div>
-          <div>
-            <input type="email" placeholder={t("email")} />
-            <input type="password" placeholder={t("pass")} />
+
+          <div className="responseAndErrorMsg">
+            {/* Display success or error messages */}
+            {responseMessage && (
+              <p style={{ color: "white" }}>{responseMessage}</p>
+            )}
+            {error && <p style={{ color: "red" }}>{error}</p>}
           </div>
-          <div>
-            <input type="password" placeholder={t("rePass")} />
-            <input type="text" placeholder={t("uplodfile")} />
-          </div>
-        </div>
-        <Link to="/verification" className={styles1.verificationRoute}>
+
           <button>{t("signup")}</button>
-        </Link>
+        </form>
+
         <div className={styles1.help}>
           <div>
             <p>{t("haveAnAcc")} </p>
@@ -69,4 +178,4 @@ const SingupForm = () => {
   );
 };
 
-export default SingupForm;
+export default SignupForm;
