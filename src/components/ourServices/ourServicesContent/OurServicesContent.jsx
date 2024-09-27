@@ -8,7 +8,7 @@ const OurServicesContent = () => {
     <>
       <div className={styles.servicesContanier}>
         <h1>{t("services-head")}</h1>
-        <div className={styles.cards}>
+        <div className={`${styles.cards} wrapper`}>
           <div className={styles.card}>
             <div className={styles.imgContanier}>
               <img
@@ -111,6 +111,7 @@ const OurServicesContent = () => {
           </div>
         </div>
       </div>
+      <div className={styles.background}></div>
     </>
   );
 };

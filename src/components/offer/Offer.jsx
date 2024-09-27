@@ -5,7 +5,7 @@ const Offer = () => {
   const { t } = useTranslation();
 
   return (
-    <div className={styles.offer}>
+    <div className={`${styles.offer} full-width`}>
       <div className={styles.imgContanier}>
         <img src={`${process.env.PUBLIC_URL}/offer.png`} alt="plant 4" />
         <span>

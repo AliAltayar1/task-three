@@ -5,7 +5,6 @@ import { useTranslation } from "react-i18next";
 import { useState } from "react";
 import { login } from "../../../authService";
 import TwoFactorAuthentication from "../2FA/TwoFactorAuthentication";
-import { Suspense } from "react";
 
 const LoginForm = () => {
   const { t } = useTranslation();

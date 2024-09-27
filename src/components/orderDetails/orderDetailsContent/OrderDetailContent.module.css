@@ -43,9 +43,10 @@
 
 .orderContent .items > div .imgContanier {
   position: relative;
-  width: 100px;
-  height: 100px;
+  min-width: 100px;
+  min-height: 100px;
 }
+
 .orderContent .items .imgContanier img {
   position: absolute;
   top: 0;
@@ -55,18 +56,29 @@
 }
 .orderContent .items > div .productName {
   margin: 0 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+  max-width: 200px;
 }
 .orderContent .items > div .amount {
   margin-right: 30px;
+  display: flex;
+  gap: 5px;
 }
 
 .orderContent .items > div .productName > span {
   font-weight: 600;
 }
+
 .orderContent .items > div .productName div {
   display: flex;
   align-items: center;
+  min-width: 126px;
+  cursor: pointer;
 }
+
 .orderContent .items > div .productName div span:first-child {
   display: flex;
   align-items: center;
@@ -168,6 +180,15 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+  }
+
+  .orderContent .items > div .productName {
+    align-items: center;
+  }
+
+  .orderContent .items > div .amount {
+    margin-right: 0;
+    margin-bottom: 10px;
   }
 }
 
@@ -271,7 +292,7 @@
   height: 100%;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 850px) {
   .orderContent {
     flex-direction: column;
   }

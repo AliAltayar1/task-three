@@ -1,0 +1,30 @@
+.delMsg {
+  background: rgba(124, 135, 97);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: calc(230px - 40px);
+  background-color: #ffffff;
+  border: 2px solid #008000;
+  border-radius: 8px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.delMsg div:first-child {
+  align-self: flex-end;
+  font-family: Helvetica;
+  cursor: pointer;
+  font-weight: bold;
+  color: #ff0000;
+}
+.delMsg div:not(:first-child) {
+  font-family: poppins;
+  color: #333;
+  text-align: center;
+  font-size: 16px;
+}

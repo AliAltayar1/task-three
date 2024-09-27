@@ -2,9 +2,6 @@ import styles1 from "./TwoFactorAuthentication.module.css";
 import styles2 from "../../../component.module.css";
 import { useState } from "react";
 import {
-  getToken,
-  logout,
-  refreshAuthToken,
   resendTwoFactorAuth,
   setToken,
   twoFactorAuth,

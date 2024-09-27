@@ -1,4 +1,4 @@
-import React, { createContext, useState } from "react";
+import { createContext, useState } from "react";
 
 // Create the context
 export const EmailContext = createContext();

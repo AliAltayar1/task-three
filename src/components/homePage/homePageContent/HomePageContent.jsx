@@ -1,5 +1,6 @@
 import styles from "./HomePageContent.module.css";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 const HomePgContnet = () => {
   const { t } = useTranslation();
@@ -10,7 +11,9 @@ const HomePgContnet = () => {
         <p>{t("home-head")}</p>
         <p>{t("home-desc")}</p>
         <span>{t("home-desc2")} </span>
-        <button>{t("home-shop")}</button>
+        <Link className={styles.shop} to={"/cart"}>
+          {t("home-shop")}
+        </Link>
       </div>
       <div className={styles.statistics}>
         <div>

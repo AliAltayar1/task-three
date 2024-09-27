@@ -19,6 +19,7 @@ import ProductsDetails from "./components/productsDetails/ProductsDetails";
 import { DarkModeProvider } from "./DarkModeContext";
 import { DirectionProvider } from "./DirectionContext";
 import { EmailProvider } from "./EmailContext";
+import { CartProvider } from "./CartContext";
 import { getToken, refreshAuthToken } from "./authService";
 
 function App() {
@@ -35,18 +36,20 @@ function App() {
       <DarkModeProvider>
         <DirectionProvider>
           <EmailProvider>
-            <Routes>
-              <Route path="/login" element={<Login />} />
-              <Route path="/signup" element={<Signup />} />
-              <Route path="/verification" element={<Verification />} />
-              <Route path="/welcome" element={<Welcome />} />
-              <Route path="/productsDetails" element={<ProductsDetails />} />
-              <Route path="/offerPage" element={<OfferPage />} />
-              <Route path="/cart" element={<OrderDetails />} />
-              <Route path="/landing" element={<Landing />} />
-              <Route path="/checkout" element={<Checkout />} />
-              <Route path="*" element={<Navigate to="/signup" />} />
-            </Routes>
+            <CartProvider>
+              <Routes>
+                <Route path="/login" element={<Login />} />
+                <Route path="/signup" element={<Signup />} />
+                <Route path="/verification" element={<Verification />} />
+                <Route path="/welcome" element={<Welcome />} />
+                <Route path="/productsDetails" element={<ProductsDetails />} />
+                <Route path="/offerPage" element={<OfferPage />} />
+                <Route path="/cart" element={<OrderDetails />} />
+                <Route path="/landing" element={<Landing />} />
+                <Route path="/checkout" element={<Checkout />} />
+                <Route path="*" element={<Navigate to="/signup" />} />
+              </Routes>
+            </CartProvider>
           </EmailProvider>
         </DirectionProvider>
       </DarkModeProvider>

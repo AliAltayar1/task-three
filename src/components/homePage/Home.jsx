@@ -1,13 +1,10 @@
 import styles from "./Home.module.css";
-import Header from "../header/header";
-import { DarkModeContext } from "../../DarkModeContext";
 import { useContext } from "react";
 import { DirectionContext } from "../../DirectionContext";
 import HomePgContnet from "./homePageContent/HomePageContent";
 import Stars from "../starsWIthBlur/Stars";
 
 const Home = () => {
-  const { darkMode } = useContext(DarkModeContext);
   const { isArabic } = useContext(DirectionContext);
   return (
     <>

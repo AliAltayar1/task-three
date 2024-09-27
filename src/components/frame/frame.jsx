@@ -5,7 +5,7 @@ const Frame = () => {
   const { t } = useTranslation();
 
   return (
-    <div className={styles.frame}>
+    <div className={`${styles.frame} full-width`}>
       <div className={styles.imgContanier}>
         <img src={`${process.env.PUBLIC_URL}/products2.png`} alt="plant" />
         <h1>{t("frame")} </h1>

@@ -4,28 +4,20 @@
   flex-direction: column;
 }
 
-.productContentContanier > div {
-  display: flex;
-  justify-content: space-evenly;
+.productContentContanier .productsWrapper {
   gap: 20px;
-  flex-wrap: wrap;
   margin-top: 80px;
-  width: 100%;
-}
-
-/* .productContentContanier > div > div {
   position: relative;
 }
-.productContentContanier > div > div::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 20px;
-  border-radius: 15px 15px 0px 0px;
-  background: rgba(214, 239, 216, 0.76);
-  bottom: 0;
-  left: 0;
-} */
+
+.productContentContanier .productsWrapper .card {
+  scroll-snap-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-right: 20px;
+  border-right: 1px solid #008a12;
+}
 
 .productContentContanier h1 {
   color: #fff;
@@ -68,18 +60,19 @@
   top: 0;
   left: 0;
   width: 100%;
+  height: 100%;
 }
 
-.productContentContanier p {
+.productContentContanier .loading,
+.productContentContanier .titleItem {
   color: #fff;
 
   font-family: Poppins;
   font-size: 20px;
-  font-style: normal;
   font-weight: 400;
-  line-height: normal;
   text-transform: capitalize;
   margin-bottom: 10px;
+  max-width: 230px;
 }
 
 .productContentContanier .price {
@@ -93,7 +86,110 @@
   margin-bottom: 10px;
 }
 
-.productContentContanier svg {
-  width: 30px;
+.productContentContanier .actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.actions span {
+  background-color: #ff4136;
+  padding: 5px 7px;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: Poppins;
   cursor: pointer;
+}
+
+.actions span.add {
+  background-color: #2ecc40;
+}
+
+.actions span.edit {
+  background-color: #0074d9;
+}
+
+/* .delMsg {
+  background: rgba(124, 135, 97);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: calc(230px - 40px);
+  z-index: 10;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.delMsg div:first-child {
+  align-self: flex-end;
+  font-family: Helvetica;
+  cursor: pointer;
+}
+.delMsg div:not(:first-child) {
+  font-family: poppins;
+} */
+
+.editForm {
+  background: rgba(124, 135, 97, 0.95);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid #7c8761;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.editForm h2 {
+  font-family: Poppins, sans-serif;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.editForm .editInputs {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.editInputs input {
+  padding: 10px;
+  outline: none;
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #333;
+  font-family: Poppins, sans-serif;
+  font-size: 14px;
+}
+
+.editForm .editBtn {
+  display: flex;
+  justify-content: space-between;
+}
+
+.editBtn button {
+  padding: 8px 15px;
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+  background-color: #ffffff;
+  color: #7c8761;
+  cursor: pointer;
+  font-family: Poppins, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.editBtn button:hover {
+  background-color: #7c8761;
+  color: #ffffff;
 }
