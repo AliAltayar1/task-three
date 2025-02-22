@@ -20,16 +20,16 @@ import { DarkModeProvider } from "./DarkModeContext";
 import { DirectionProvider } from "./DirectionContext";
 import { EmailProvider } from "./EmailContext";
 import { CartProvider } from "./CartContext";
-import { getToken, refreshAuthToken } from "./authService";
+// import { getToken, refreshAuthToken } from "./authService";
 
 function App() {
-  const location = useLocation();
+  // const location = useLocation();
 
-  useEffect(() => {
-    if (getToken()) {
-      refreshAuthToken();
-    }
-  }, [location]);
+  // useEffect(() => {
+  //   if (getToken()) {
+  //     refreshAuthToken();
+  //   }
+  // }, [location]);
 
   return (
     <div className="App">
@@ -47,7 +47,7 @@ function App() {
                 <Route path="/cart" element={<OrderDetails />} />
                 <Route path="/landing" element={<Landing />} />
                 <Route path="/checkout" element={<Checkout />} />
-                <Route path="*" element={<Navigate to="/signup" />} />
+                <Route path="*" element={<Navigate to="/landing" />} />
               </Routes>
             </CartProvider>
           </EmailProvider>
